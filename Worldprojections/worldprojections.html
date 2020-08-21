@@ -9,20 +9,55 @@
     <h1>In this project I learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>After importing world map data from naturalearth and activiating the indicatrix mapper plugin I was able to use the project proprty(CRS) function is QGIS to explore how different projections affected how a world map is presented. The indicatrix mapper was vital in understanding the distorion in the map as it uses circles and lines to demonstrate levels and types of distortion in different areas of the map. I found that many different projections caused similar distortion. In most of the projections I explored distortion was minimal at the equator and there was almost never any distortion at the intersection of the equator and the Prime Meridian, with the exception of the geocent projections where there was little distortion at the north pole and the highest level of distorion at the equator. The indicatrix mapper allowed me to see that oftentimes areas of land near the poles are stretched horizontically or vertically depending on the projection and the area of these lands is presented as very large compared to their actual size.  </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>There is shape and area distortion towards the poles. The area towards the poles is increased and the land is stretched horizonally.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>There is shape and area distortion radiating from the intersection of the Equator and Prime Meridian. Towards the outer edges of the map there is vertical stretching.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>Pseudo-Mercator Projection</h2>
+    <h3>There is area dostortion but no shape distortion. Towards the poles the area of the land is distorted to seem larger.</h3>
+    <a href="./maps/Pseudo Mercador.png">
+    <img src="./maps/Pseudo Mercador.png" alt="3857" width='500px'>
+    </a>
+    <h2>Winkel I Projection</h2>
+    <h3>Towards the poles area is distorted to seem larger. The area is increasingly stretched going towards the corners of the map.</h3>
+    <a href="./maps/Winkel.png">
+    <img src="./maps/Winkel.png" alt="53018" width='500px'>
+    </a>
+    <h2>Equal Area Cylindrical Projection</h2>
+    <h3>There is shape distortion that stretches the land towards the poles horizontally.</h3>
+    <a href="./maps/cylindrical.png">
+    <img src="./maps/cylindrical.png" alt="54034" width='500px'>
+    </a>
+    <h2>Equidistant Conic Projection</h2>
+    <h3>The area of land towards the south pole is stretched horizontally and distorted to seem larger.</h3>
+    <a href="./maps/Conic2.png">
+    <img src="./maps/Conic2.png" alt="54027" width='500px'>
+    </a>
+    <h2>Azimuthal Equidistant Projection</h2>
+    <h3>This projection is very similar to the equidistamt conic projection with horizontal stretching near the south pole.</h3>
+    <a href="./maps/north pole.png">
+    <img src="./maps/north pole.png" alt="102016" width='500px'>
+    </a>
+    <h2>Van der Grinten Projection</h2>
+    <h3>The area near the poles is horizontally pinched in towards the prime meridian and there is area distortion to make the pole areas seem larger.</h3>
+    <a href="./maps/van der.png">
+    <img src="./maps/van der.png" alt="53029" width='500px'>
+    </a>
+    <h2> Geocent Projection</h2>
+    <h3>This projection seems to only show the northern hemisphere, this projection has less distortion than many others. There is only slight area and shape distortion near the equator showing the land as stretched horizontally. </h3>
+    <a href="./maps/GEOCENT.png">
+    <img src="./maps/GEOCENT.png" alt="6317" width='500px'>
+    </a>
+    <h2 style="color:red"> <u></u></h2>
+    <h3></h3>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
