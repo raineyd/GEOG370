@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Frist Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+
+</head>
+<body>
+
+    <div id="mapid"></div>
+    <style>
+        #mapid{ width: 900px; height: 500px;}
+    </style>
+
+    <script>
+        var map = L.map('mapid').setView([35.91, -79.05], 17);
+        L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {}).addTo(map)
+        L.marker([35.906945,-79.047858]).addTo(map)
+            .bindPopup("Kenan Memorial Stadium")
+            .openPopup();
+        L.marker([35.908613,-79.049222]).addTo(map)
+            .bindPopup("Morehead-Patterson Belltower")
+            .openPopup();
+        L.marker([35.913819,-79.049067]).addTo(map)
+            .bindPopup("Coker Arboretum")
+            .openPopup();
+
+        var KMIcon = L.icon({ 
+            iconUrl: 'https://cdn.onlinewebfonts.com/svg/img_565355.png',
+            iconSize: [50,50],
+            popupAnchor: [0,0] 
+            });
+            
+
+        var CAIcon = L.icon({ 
+            iconUrl: 'https://www.pngkit.com/png/detail/43-433274_png-file-tree-icon.png',
+            iconSize: [50,50],
+         popupAnchor: [0,0] 
+            });
+
+
+        var BTIcon = L.icon({ 
+            iconUrl: 'https://www.vhv.rs/dpng/d/273-2736884_ringing-alarm-transparent-youtube-bell-icon-hd-png.png',
+            iconSize: [50,50],
+            popupAnchor: [0,0] 
+            });
+
+        var KMPopup = "The game is starting!<br/><img src='https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_411,q_75,w_620/https://assets.simpleviewinc.com/simpleview/image/upload/crm/chapelhill/Kenan_Memorial_Stadium_462_by_305_a8cd6490-5056-8c03-0b89615763a6b2c3.jpg'width='100px'/>";
+
+        var BTPopup = "The bells are ringing!<br/><img src='https://assets.simpleviewinc.com/simpleview/image/upload/crm/chapelhill/Bell-Tower-620x410-f2dedab15056b3a_f2dedc8c-5056-b3a8-49bdb6605f438449.jpg'width='100px'/>";
+
+        var CAPopup = "Look at all the pretty leaves!<br/><img src='https://tclf.org/sites/default/files/thumbnails/image/CokerArboretum_RaagaBhandari_2017_01_0.jpg'width='100px'/>";
+
+        L.marker([35.906945,-79.047858], {
+            icon: KMIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(KMPopup)
+        .addTo(map)
+
+        L.marker([35.908613,-79.049222], {
+            icon: BTIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(BTPopup)
+        .addTo(map)
+
+        L.marker([35.913819,-79.049067], {
+            icon: CAIcon,
+        pointToLayer: function (feature, latlng) {
+        return L.marker(latlng);}})
+        .bindPopup(CAPopup)
+        .addTo(map)
+
+
+
+    </script>
+    
+</body>
+</html>
