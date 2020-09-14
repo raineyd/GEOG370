@@ -28,12 +28,24 @@
   <script>
       var map = L.map('map').setView([37.93725620221694, -107.80630139322511], 14.0);
 
-      var daMarker = L.marker([37.929969,-107.807017]);
 
-      var daPark = L.marker([37.940588,-107.818883]);
+      var BCRPopup = "The Bear Creek Reserve is a nature reserve that was established after the time when my historic photo was taken.<br/><img src='https://www.telluride.com/uploads/listings/362/BearCreekFallsHike-2-medium.jpg'width='100px'/>";
 
-      var daNetwork = L.marker([37.932436,-107.785747]);
+      var JLMPPopup = "It appears the Judy Long Memorial Park was also established after my historic photo was taken as there appears to be buildings in place of the park.<br/><img src='https://farm5.staticflickr.com/4095/4855660699_e80761f7a4.jpg'width='100px'/>";
 
+      var NRSPopup = "Ther is network of what appears to be streams or roads in my historic photo that is not present in the OSM.<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Teuchl_stream.jpg/1200px-Teuchl_stream.jpg'width='100px'/>";
+
+      var daMarker = L.marker([37.929969,-107.807017])
+      .bindPopup(BCRPopup)
+      .openPopup();
+
+      var daPark = L.marker([37.940588,-107.818883])
+      .bindPopup(JLMPPopup)
+      .openPopup();
+
+      var daNetwork = L.marker([37.932436,-107.785747])
+      .bindPopup(NRSPopup)
+      .openPopup();
       
       var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	      maxZoom: 19,
