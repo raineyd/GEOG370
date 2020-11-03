@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 10: Geoprocessing Analysis</title>
+</head>
+<body>
+    <h1>Homework 10: Geoprocessing Analysis</h1>
+    <h2>Rainey Dunham 730336342</h2>
+    <h3> The question I wanted to look at is how the avaliablility of lawe enforcment differs in areas of higher or lower poverty levels. The map I chose to make shows North Carolina counties organized into classes based on the percentage of the population that lives under the poverty line. I decided to look at the levels of police presence in the different counties to see if there were any patterns relating to the poverty level in that county. I created this map using a CSV file showing the poverty levels in each county and created a coropleth. The first geoprocessing tool I used was dissolve when I dissolved each class of poverty into it's own layer. I then looked at the location and amount of law enforcement locations in the higher poverty counties and saw no correlation, so I chose to put a five mile buffer on each station. I chose five miles as an estimate on how far law enforcement could travel in five to ten minutes to an emergency situation. It is obvious when this buffer is placed that there are many areas in each county well out of the range of law enforcement although I can't see a distinct difference between the different classses of poverty.  </h3>
+    
+    <a href="./Homework 10/print_hw_10_1.png">
+        <img src="./Homework 10/print_hw_10_1.png" alt="My Map" width='800px'>
+        </a>
+
+    <h2>Data used for this project</h2>
+        <a href="./Homework 10/ACSST1Y2019.S1701_2020-10-14T184519/poverty-1.csv"> CVS dataset </a>
+        <p></p>
+        <a href="./Homework 10/NC_Counties-shp/counties.shp"> Counties shp</a>
+        <p></p>
+        <a href="./Homework 10/Law_Enforcement_Locations-shp 2/Law_Enforcement_Locations.shp"> Law enforcement locations shp</a>
+        <p></p>
+        <a href="https://www.census.gov/"> Link to organisation CVS data was obtained from</a>
+
+    </body>
+    </html>
